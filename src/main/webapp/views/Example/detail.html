@@ -1,0 +1,23 @@
+<header ng-switch on="$location.path().indexOf('/Examples/new') > -1">
+    <h3 ng-switch-when="true">Create a new Example</h3>
+    <h3 ng-switch-when="false">View or edit Example</h3>
+</header>
+<form id="ExampleForm" name="ExampleForm" class="form-horizontal" role="form">
+    
+
+    <div class="form-group" ng-class="{'has-error': ExampleForm.name.$invalid}">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div id="nameControls" class="col-sm-10">
+            <input id="name" name="name" type="text" class="form-control" ng-model="example.name" placeholder="Enter the Example Name"></input>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button id="saveExample" name="saveExample" class="btn btn-primary" ng-disabled="isClean() || ExampleForm.$invalid" ng-click="save()"><span class="glyphicon glyphicon-ok-sign"></span> Save</button>
+            <button id="cancel" name="cancel" class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</button>
+            <button id="deleteExample" name="deleteExample" class="btn btn-danger" ng-show="example.id" ng-click="remove()"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        </div>
+    </div>
+</form>

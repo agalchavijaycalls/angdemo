@@ -1,0 +1,143 @@
+@CHARSET "UTF-8";
+
+/* Sticky footer styles
+ -------------------------------------------------- */
+body.waiting-for-angular div#content-outer {
+  display: none;
+}
+body.waiting-for-angular div#initializing-panel {
+  display: block;
+  background: url(../images/loading.gif) center center no-repeat;
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+html, body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#content {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
+}
+
+#content > .container {
+    padding-top: 50px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+    height: 60px;
+}
+
+#footer {
+    background-color: #F5F5F5;
+    text-align: center;
+    border-top: 1px solid #E5E5E5;
+}
+
+h2 i.icon-check {
+    vertical-align: middle;
+}
+
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    table {
+        table-layout: auto;
+    }
+    .row-offcanvas {
+        position: relative;
+        transition: all 0.25s ease-out;
+    }
+    .row-offcanvas-left .sidebar-offcanvas {
+        display:none;
+    }
+    .row-offcanvas-left.active .sidebar-offcanvas {
+        display:inherit;
+    }
+    .row-offcanvas-left.active .mainarea {
+        display:none;
+    }
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+#login-bg {
+  background: url(../images/login/login_bg.jpg) no-repeat top center;
+}
+#login-holder {
+  margin: 0px auto 0 auto;
+  width: 508px;
+  padding-top: 100px;
+}
+#loginbox {
+  background: url(../images/login/loginbox_bg.png) no-repeat;
+  font-size: 12px;
+  height: 212px;
+  line-height: 12px;
+  padding-top: 60px;
+  position: relative;
+  width: 508px;
+}
+#login-inner {
+  color: #161616;
+  font-family: Tahoma;
+  font-size: 13px;
+  line-height: 12px;
+  margin: 0 auto;
+  width: 310px;
+}
+#login-inner label {
+  color: #161616;
+  cursor: pointer;
+  font-family: Tahoma;
+  font-weight: bold;
+  line-height: 12px;
+  padding-left: 10px;
+
+}
+#login-inner th {
+  padding: 0 0 6px 0;
+  text-align: left;
+  width: 95px;
+}
+#login-inner td {
+  padding: 0 0 6px 0;
+}
+.login-inp {
+  background: url(../images/login/inp_login.gif) no-repeat;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  height: 28px;
+  padding: 6px 6px 0 10px;
+  width: 204px;
+}
+.submit-login {
+  background: url(../images/login/submit_login.gif) no-repeat;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 29px;
+  text-indent: -3000px;
+  width: 73px;
+}
+.submit-login:hover {
+  background: url(../images/login/submit_login.gif) no-repeat 0 -29px;
+}
